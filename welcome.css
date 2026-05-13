@@ -1,0 +1,229 @@
+:root{
+  --bg-main: #0e130f;
+  --green-primary: #22c76e;
+  --green-dark: #1a9e5f;
+  --text-main: #ffffff;
+  --text-secondary: #6a7068;
+  --text-muted: #3a3e38;
+}
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+    html, body {
+      width: 100%; height: 100%; overflow: hidden;
+      background: #0e130f;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* ── LOCATION TAG ── */
+    .location-tag {
+      position: absolute;
+      top: 1.75rem; right: 2rem;
+      display: flex; align-items: center; gap: 0.4rem;
+      color: var(--text-secondary); font-size: 0.8rem;
+      opacity: 0;
+      animation: fadeIn 0.6s ease forwards 0.2s;
+    }
+
+    
+    /* ── GRID OVERLAY ── */
+    .grid-overlay {
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(34,199,110,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34,199,110,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+
+    /* ── CANVAS BG ── */
+    canvas {
+      position: fixed; inset: 0;
+      z-index: 0; pointer-events: none;
+    }
+
+
+    /* ── MAIN WRAPPER ── */
+    .welcome-wrap {
+      position: relative; z-index: 1;
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* ── TAG LINE ── */
+    .tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(34,199,110,0.1);
+      border: 1px solid rgba(34,199,110,0.25);
+      color: var(--green-primary);
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem; border-radius: 100px;
+      margin-bottom: 1.75rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.3s;
+    }
+
+    
+    /* ── WELCOME TEXT ── */
+    .welcome-label {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(0.85rem, 2vw, 1rem);
+      font-weight: 400;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--green-primary);
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.6s;
+    }
+
+
+    /* ── MAIN HEADLINE ── */
+    .headline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(3rem, 9vw, 7rem);
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+    .headline .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(60px);
+      animation: wordRise 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .headline .word:nth-child(1) { 
+        animation-delay: 0.9s; color: #ffffff; 
+    }
+    .headline .word:nth-child(2) { 
+        animation-delay: 1.15s; color: #22c76e; 
+    }
+
+
+    /* ── SUB TEXT ── */
+    .subtext {
+      font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+      font-weight: 300;
+      color: #6a7068;
+      max-width: 480px;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 1.6s;
+    }
+
+    /* ── CTA BUTTON ── */
+    .cta-wrap {
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 2s;
+    }
+
+
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      background: var(--green-primary);
+      color: #ffffff;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      padding: 1rem 2.5rem;
+      border-radius: 100px;
+      text-decoration: none;
+      border: none; cursor: pointer;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      position: relative; overflow: hidden;
+    }
+
+    .cta-btn::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(255,255,255,0.06);
+      opacity: 0; transition: opacity 0.2s;
+    }
+
+    .cta-btn:hover {
+      background: var(--green-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(26,158,95,0.4);
+    }
+    .cta-btn:hover::before { opacity: 1; }
+    .cta-btn:active { transform: translateY(0); 
+    }
+
+    
+    /* ── CORNER LOGO ── */
+    .corner-logo {
+      position: absolute;
+      top: 1.75rem; left: 2rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800; font-size: 1.2rem;
+      color: #ffffff; text-decoration: none;
+      opacity: 0;
+      animation: fadeIn 0.6s ease forwards 0.1s;
+    }
+    .corner-logo span { 
+        color: var(--green-primary); 
+    }
+
+    
+    /* ── KEYFRAMES ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes wordRise {
+      from { opacity: 0; transform: translateY(60px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(0.75); }
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50%       { opacity: 1; transform: scaleY(1.15); transform-origin: top; }
+    }
+
+
+    /* ── FADE OUT ON NAVIGATE ── */
+    body.leaving {
+      animation: leaveOut 0.5s ease forwards;
+    }
+    @keyframes leaveOut {
+      to { opacity: 0; transform: scale(1.02); }
+    }
+
+    @media (max-width: 480px) {
+
+  .corner-logo {
+    display: block;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1rem;
+  }
+
+  .location-tag {
+    display: flex;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.7rem;
+    gap: 0.25rem;
+  }
+
+}
