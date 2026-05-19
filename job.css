@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body{
+    background-color: #333;
+    height: 100vh;
+    width: 100vw;
+} 
+ /* Navigation styling */
+ .header_nav{
+    background-color: #0e130f;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: 0.25em solid #1a9e5f;
+}
+.header_nav .navigation{
+    display: flex;
+    gap: 0.5em;;
+}
+.header_nav .navigation .logo{
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+.header_nav .navigation .logo #logo_text{
+    color: #22c76e;
+    margin-right: 18em;
+}
+.header_nav .navigation a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.15em;
+    gap: 0.5em;
+}
+/* .header_nav .navigation a:hover{
+    color: #22c76e;
+
+} */
+.header_nav .navigation a.active{ /* tells if link has been clicked */
+    color: #5922c7;
+}
+.header_nav .navigation .nav_links{
+    display: flex;
+    gap: 3em;
+    padding: 0.02em 0.02em;
+    text-align: center;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+.header_nav .navigation .nav_links a:hover{
+    margin-top: 0.5em;
+    transition: 0.3s ease-in-out; /* give a delay to the hover effect */
+    height: 2.5em;
+    width: 5em;
+    text-align: center;
+    background-color: #22c76e;
+    color: #ffffff;
+    border-radius: 0.5em;
+}
+.header_nav .navigation .nav_links a{
+    display: flex;
+    align-items: flex-end; /* sets the link to the bottom of the nav bar */
+    gap: 0.5em;
+
+}
+.header_nav .navigation .nav_links a:last-child{
+    color: #ffffff;
+    background-color: #22c76e;
+    padding: 0.5em 0.5em;
+    border-radius: 0.5em;
+    margin-top: 1em;
+}
+ /* End of Navigation styling */
+ /* Hero Section */
+    .hero{
+        background-color: #333;
+        color: #ffffff;
+        text-align: center;
+        padding: 4em 2em;
+        border-top: 0.25em solid #ffffff;
+    }
+    .hero .texts-1{
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+    .hero p{
+        font-size: 1.25em;
+        color: #6a7068;
+    }
+    .hero p .span-1{
+        color: #ffffff;
+        font-weight: bold;
+    }
+    .hero p .span-2{
+        color: #22c76e;
+        font-weight: bold;
+    }
+ /* End of Hero Section */
+    /* Job Ldirectory */
+        .tabs{
+            background-color: #333;
+            padding: 2em;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+        .tabs .tab{
+            background-color: #1a9e5f;
+            color: #ffffff;
+            padding: 1em 2em;
+            border-radius: 0.5em;
+            font-size: 1.25em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .tabs .tab:hover{
+            background-color: #22c76e;
+            transition: 0.3s ease-in-out; /* give a delay to the hover effect */
+        }
+    /* End of Job Ldirectory */
+    /* Job listings pages */
+        .job-left{
+            background-color: #333;
+            color: #ffffff;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 2em;
+            border-bottom: 0.25em solid #1a9e5f;
+        }
