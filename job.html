@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job page| Employment website</title>
-    <link rel="stylesheet" href="job.css">
+    <title>Find Jobs | NexStep</title>
+    <link rel="stylesheet" href="/css/job.css">
 </head>
 <body>
-    <!-- Header and Navigation -->
-<header class="header_nav">
-    <nav class="navigation">
-        <a href="home.html" class="logo">Nex<span id="logo_text">Step</span></a>
+   <!-- Header and Navigation -->
+<header>
+    <nav>
+        <a href="home.html" class="logo-nav">Nex<span>Step</span></a>
 
-        <div class="nav_links">
+        <div class="nav-links" id="navLinks">
             <a href="home.html">Home</a>
-            <a href="job.html">Find Job</a>
+            <a href="job.html">Browse Jobs</a>
             <a href="details.html">Job Details</a>
             <a href="employer.html">Post Job</a>
             <a href="job.html" class="nav-cta btn">Find Jobs →</a>
         </div>
-
         <!-- Hamburger-->
         <div class="hamburger" id="hamburger">
             <span></span>
@@ -29,23 +28,27 @@
     </nav>
 </header>
     <!-- End of Header and Navigation -->
-    <!-- Hero Section -->
 
-    <section class="hero">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-inner">
         <h2 class="texts-1">Browse Jobs by Category</h2>
-        <p>Find the perfect job in your field  <span class="span-1">NEX</span><span class="span-2">STEP</span></p>
-        
-    </section>
+        <p>Find the perfect job in your field  <span class="span-1">Nex</span><span class="span-2">Step</span></p>
+        </div>
+    </div>
     <!-- End of Hero Section -->
+
+    <!--Add a search bar with a dropdown of locations-->
      <!-- Job Ldirectory -->
-    <section class="tabs">
-        <button class="tab active">All Jobs</button>
+    <div class="tabs">
+        <button class="tab active">All Types</button>
         <button class="tab">Internship</button>
-        <button class="tab">Full Time</button>
-        <button class="tab">Part Time</button>
+        <button class="tab">Full-Time</button>
+        <button class="tab">Part-Time</button>
         <button class="tab">Contract</button>
-    </section>
+    </div>
     <!-- End of Job Ldirectory -->
+
      <!-- Job Listings page-->
     <section>
             <div class="job-left">
@@ -198,11 +201,28 @@
         </div>
     </section>
     <!--End of job listing page-->
-    <footer>
-    <div class="footer">
-    <p>&copy; 2025 Mywebsite. All rights reserved. </p>
-    <p>info@netstep.com</p>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div>
+                <a href="home.html" class="footer-logo">Nex<span>Step</span></a>
+                <p class="footer-descrip">Connecting skilled youth with local employers in Buea.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <a href="job.html">Browse Jobs</a>
+                <a href="employer.html">Post a Job</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 NexStep. Made with innovation in Buea, Cameroon.</span>
+        </div>
     </div>
-    </footer>
+
+</footer>
+<!-- JavaScript link-->
+<script src="js/script.js"></script>
 </body>
 </html>
