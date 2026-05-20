@@ -40,7 +40,7 @@ nav {
   border-bottom: 2px solid var(--green);
 }
 
-.logo-nav {
+.nav-logo {
   font-family: 'Syne', sans-serif;
   font-weight: 800; 
   font-size: 1.4rem;
@@ -49,12 +49,14 @@ nav {
   letter-spacing: -0.02em;
 }
 
-.logo-nav span {
+.nav-logo span {
    color: var(--green-light); 
   }
 
 .nav-links {
-   display: flex; align-items: center; gap: 0.25rem; 
+   display: flex; 
+   align-items: center; 
+   gap: 0.25rem; 
   }
 
 .nav-links a {
