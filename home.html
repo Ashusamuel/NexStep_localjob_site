@@ -15,10 +15,10 @@
    <div class="nav-links" id="navLinks">
     <a href="home.html" class="active">Home</a>
     <a href="job.html">Browse Jobs</a>
-    <a href="details.html">Job Details</a>
     <a href="employer.html">Post Job</a>
-    <a href="job.html" class="nav-cta btn">Find Jobs →</a>
+    <a href="job.html" class="nav-cta btn">Find Jobs</a>
   </div>
+  
   <!-- Hamburger -->
   <div class="hamburger" id="hamburger">
     <span></span>
@@ -32,13 +32,14 @@
  <section class="hero">
         <div class="hero-inner">
           <div class="hero-tag">
-             Buea's #1 Youth Job Platform
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="4" fill="#22c76e"/></svg>
+              Buea's #1 Youth Job Platform
           </div>
           <h1>Your Gateway to Employment in <br>Buea <em>Starts here</em></h1>
           <p>Connecting skilled graduates with local employers in Buea.</p>
-          <div class="here-action">
-            <a href="job.html" class="btn btn-primary">Browse Job</a>
-            <a href="employer.html" class="btn btn-secondary">Post  Job</a>
+          <div class="hero-actions">
+             <a href="job.html" class="btn btn-primary btn">Browse Jobs</a>
+             <a href="employer.html" class="btn btn-outline btn">Post a Job</a>
           </div>
         <div class="hero-stats">
           <div>
@@ -58,101 +59,95 @@
 </section>
 
 <!-- Available Jobs Section -->
- <section class="">
-  <div class="job-section">
-    <div class="section-inner">
-      <div class="section-header">
-        <div class="section-heading">Opportunities</div>
-        <h2 class="section-title">Explore Local Job Listings in Buea</h2>   
+ <section class="section" style="background: var(--cream);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Opportunities</div>
+        <h2 class="section-title">Featured Jobs in Buea</h2>
+        <p class="section-sub">Hand-picked roles from verified local employers, posted this week.</p>
       </div>
-      <a href="job.html" class="btn btn-secondary">View All Jobs</a>
+      <a href="job.html" class="btn btn-outline">View All Jobs</a>
     </div>
 
-    <div class="job-listing">
-      <a href="details.html" class="job-card">
+    <div class="jobs-grid">
+      <a href="detail.html" class="job-card">
         <div class="job-card-top">
-          <div class="job-logo">
-            <img src="images/company1.png" alt="Company Logo" />
-            <span class="job-type">Internship</span>
-          </div>
-          <div class="job-title">Networking Intern</div>
-          <div class="job-company">Ctnet</div>
-          <div class="job-desc">Gain hands-on experience in network administration and support.</div>
-          <div class="job-item">
-            <span class="job-item-1">80,000 XAF/month</span>
-            <span class="job-item-2">Camp-Sic, Buea</span>
-          </div>
+          <div class="company-logo">CT</div>
+          <span class="job-badge badge-full">Full-time</span>
+        </div>
+        <div class="job-title">Network Administrator</div>
+        <div class="job-company">Ctnet</div>
+        <div class="job-desc">Monitor and maintain network infrastructure to ensure optimal performance and security.</div>
+        <div class="job-meta">
+          <span class="job-meta-item">Camp-sic, Buea</span>
+          <span class="job-meta-item">75,000 XAF/month</span>
         </div>
       </a>
 
-      <a href="details.html" class="job-card">
+      <a href="detail.html" class="job-card">
         <div class="job-card-top">
-          <div class="job-logo">
-            <img src="images/company2.png" alt="Company Logo" />
-            <span class="job-type">Full-Time</span>
-          </div>
-          <div class="job-title">Customer Support Agent</div>
-          <div class="job-company">Local Connect Ltd</div>
-          <div class="job-desc">Provide excellent customer service and support to our clients.</div>
-          <div class="job-item">
-            <span class="job-item-1">110,000 XAF/month</span>
-            <span class="job-item-2">Mile 17, Buea</span>
-          </div>
+          <div class="company-logo">MH</div>
+          <span class="job-badge badge-intern">Internship</span>
+        </div>
+        <div class="job-title">Junior Web Developer</div>
+        <div class="job-company">MountainHub</div>
+        <div class="job-desc">Assist in developing and maintaining web applications for a growing tech company.</div>
+        <div class="job-meta">
+          <span class="job-meta-item">Greate soppo, Buea</span>
+          <span class="job-meta-item">30,000 XAF/mo</span>
         </div>
       </a>
 
-      <a href="details.html" class="job-card">
+      <a href="detail.html" class="job-card">
         <div class="job-card-top">
-          <div class="job-logo">
-            <img src="images/company3.png" alt="Company Logo" />
-            <span class="job-type">Part-Time</span>
-          </div>
-          <div class="job-title">Hardware Maintenance Technician</div>
-          <div class="job-company">Emma4Christ</div>
-          <div class="job-desc">Assist with the installation, maintenance, and repair of hardware equipment.</div>
-          <div class="job-item">
-            <span class="job-item-1">70,000 XAF/month</span>
-            <span class="job-item-2">Buea Town</span>
-          </div>
+          <div class="company-logo">EC</div>
+          <span class="job-badge badge-full">Full-time</span>
+        </div>
+        <div class="job-title">Hardware Maintenance Technician</div>
+        <div class="job-company">Emma4Christ</div>
+        <div class="job-desc">Maintain and repair computer hardware and networking equipment for our community outreach programs.</div>
+        <div class="job-meta">
+          <span class="job-meta-item">UB Junction, Buea</span>
+          <span class="job-meta-item">55,000 XAF/month</span>
         </div>
       </a>
+
     </div>
   </div>
- </section>
+</section>
 
- <!-- How it Works Section -->
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-lable">How it works</div>
-      <h2 class="section-title">Simple. Fast. Effective.</h2>
-
-      <div class="features">
-        <div class="feature-card">
-          <div class="fearure-icon">🔍</div>
-          <div class="feature-title">Browse Listings</div>  
-          <div class="feature-desc">Explore a wide range of job opportunities in Buea.</div>
-        </div>
-
-        <div class="feature-card">
-          <div class="fearure-icon">📄</div>
-          <div class="feature-title">Apply Online</div>  
-          <div class="feature-desc">Submit your application directly through our platform.</div>
-        </div>
-
-        <div class="feature-card">
-          <div class="fearure-icon">🏢</div>
-          <div class="feature-title">Employer Post free</div>
-          <div class="feature-desc">Employers can post job openings for free and find local talent instantly.</div>
-        </div>
-
-        <div class="feature-card">
-          <div class="fearure-icon">🤝</div>
-          <div class="feature-title">Get Hired Locally</div>  
-          <div class="feature-desc">Connect with local employers and land your dream job.</div>
-        </div>
+ <!-- HOW IT WORKS -->
+<section class="section" style="background: var(--white);">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom: 2.5rem;">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title" style="margin: 0 auto 0.5rem;">Simple. Fast. Local.</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <div class="feature-title">Browse Listings</div>
+        <div class="feature-desc">Search hundreds of curated jobs in Buea — filtered by type, sector, and location.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📝</div>
+        <div class="feature-title">Apply in Minutes</div>
+        <div class="feature-desc">Fill out a simple form, attach your CV, and hit apply. No registration walls.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏢</div>
+        <div class="feature-title">Employers Post Free</div>
+        <div class="feature-desc">Local businesses can post jobs instantly and reach hundreds of qualified youth.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <div class="feature-title">Get Hired Locally</div>
+        <div class="feature-desc">No relocation needed — build your career right here in the Silicon Mountain.</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <!-- slogan -->
  <div class="slogan">
@@ -183,7 +178,6 @@
     <div class="footer-bottom"><span>© 2025 BueaJobs. Made innovation  in Buea, Cameroon.</span></div>
   </div>
 </footer>
-<script src="js/script.js"></script>
 </body>
 </html>
        
