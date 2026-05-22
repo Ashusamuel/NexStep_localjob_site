@@ -198,11 +198,12 @@ nav {
 }
 
 .form-error { 
-  color: red; 
-  font-size: 0.8rem; 
-  margin-top: 0.35rem; 
-  display: none; 
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
+
 .form-error.show { 
   display: block; 
 }
@@ -222,7 +223,7 @@ nav {
   margin-bottom: 1.5rem;
 }
 
-.btn {
+.btn-submit {
   background: var(--green);
   color: var(--white);
   padding: 0.75rem 1.5rem;
@@ -233,54 +234,45 @@ nav {
   cursor: pointer;
   transition: background-color 0.2s;
   justify-content: center;
+  width: 100%;
 }
 
+.btn-submit:hover {
+  background: var(--green-light);
+  color: var(--white);
+  transform: translateY(-2px);
+}
 
+.posted {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--dark);
+  color: var(--white);
+  border-left: 4px solid var(--green);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
 
+.posted.show {
+  opacity: 1;
+  transform: translateY(0);
+  opacity: 1;
+}
 
+.posted-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.posted-msg {
+  color: #b0b5ae;
+  font-size: 0.85rem;
+}
 
 
 /* Footer section */
