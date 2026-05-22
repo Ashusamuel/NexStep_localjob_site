@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Job | NexStep</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/employer.css">
 </head>
 <body>
     
 <!-- Header and Navigation -->
 <header>
     <nav>
-        <a href="home.html" class="logo">Nex<span>Step</span></a>
-
+        <a href="home.html" class="nav-logo">Nex<span>Step</span></a>
         <div class="nav-links" id="navLinks">
             <a href="home.html">Home</a>
-            <a href="job.html">Find Job</a>
-            <a href="details.html">Job Details</a>
-            <a href="employer.html">Post Job</a>
-            <a href="job.html" class="nav-cta btn">Find Jobs →</a>
+            <a href="job.html">Browse Jobs</a>
+            <a href="employer.html" class="active">Post Job</a>
+            <a href="job.html" class="nav-cta btn">Find Jobs</a>
         </div>
-        <!-- Hamburger-->
+<!-- Hamburger-->
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -30,183 +28,117 @@
 </header>
 
 <!-- Hero Section -->
-<section class="page-header">git
-    <div class="header-content">
+<section class="page-header">
+    <div class="header-inner">
         <h1>Post a Job</h1>
         <p>Connect with skilled graduates in Buea by posting your opportunities.</p>
     </div>
 </section>
 
-<!-- Main Content -->
-<section class="post-job-content">
+<!-- FORM -->
+<div class="post-job-wrap">
+  <div class="form-card">
+    <div class="form-title">Job Details</div>
+    <form id="postForm" novalidate>
 
-    <!-- Form Section -->
-    <div class="form-card">
-        <div class="form-title">Job Details</div>
-        <p class="form-description">
-            Fill in the details of the job you want to post.
-        </p>
-        <form id="postform" novalidate>
-            <!-- Company Name -->
-            <div class="form-group">
-                <label class="form-label" for="companyName">Company Name</label>
-                <input type="text" id="companyName" name="companyName" placeholder="e.g. CTinc Group" aria-label="Company Name" required>
-                <div class="error-message" id="companyNameError">Please enter your company name.</div>
-            </div>
+      <div class="form-group">
+        <label class="form-label" for="companyName">Company / Organization Name <span>*</span></label>
+        <input class="form-input" id="companyName" type="text" placeholder="e.g Ctnet" />
+        <div class="form-error" id="companyNameErr">Please enter your company name.</div>
+      </div>
 
-            <!-- Company Logo -->
-            <div class="form-group">
-                <label class="form-label" for="companyLogo"> Company Logo </label>
-                <input type="file" id="companyLogo" accept="image/* "aria-label="Company Logo">
-            </div>
+      <div class="form-group">
+        <label class="form-label" for="contactEmail">Contact Email <span>*</span></label>
+        <input class="form-input" id="contactEmail" type="email" placeholder="hr@yourcompany.com" />
+        <div class="form-error" id="contactEmailErr">Please enter a valid email address.</div>
+      </div>
 
-            <!-- Email -->
-            <div class="form-group">
-                <label class="form-label" for="contactEmail">Contact Email</label>
-                <input type="email" id="contactEmail" name="contactEmail" placeholder="e.g. contact@company.com" required aria-label="Contact Email">
-                <div class="error-message" id="contactEmailError">
-                    Please enter a valid email.
-                </div>
-            </div>
-
-            <!-- Job Title -->
-            <div class="form-group">
-                <label class="form-label" for="jobTitle">Job Title</label>
-                <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g. Software Engineer" required aria-label="Job Title">
-                <div class="error-message" id="jobTitleError">
-                    Please enter a job title.
-                </div>
-            </div>
-
-            <!-- Job Category -->
-            <div class="form-group">
-                <label class="form-label" for="jobCategory">Job Category</label>
-                <select id="jobCategory" required>
-                    <option value="">Select Category</option>
-                    <option>Technology</option>
-                    <option>Business</option>
-                    <option>Marketing</option>
-                    <option>Design</option>
-                    <option>Education</option>
-                </select>
-            </div>
-
-            <!-- Employment Type -->
-            <div class="form-group">
-                <label class="form-label" for="jobType">Employment Type</label>
-                <select id="jobType" name="jobType" required>
-                    <option value="">Select Employment Type</option>
-                    <option value="full-time">Full-Time</option>
-                    <option value="part-time">Part-Time</option>
-                    <option value="internship">Internship</option>
-                    <option value="contract">Contract</option>
-                </select>
-
-                <div class="error-message" id="jobTypeError"> Please select an employment type.</div>
-            </div>
-
-            <!-- Experience Level -->
-            <div class="form-group">
-                <label class="form-label" for="experienceLevel">
-                    Experience Level
-                </label>
-                <select id="experienceLevel">
-                    <option value="">Select Experience Level</option>
-                    <option>Entry Level</option>
-                    <option>Intermediate</option>
-                    <option>Senior Level</option>
-                </select>
-            </div>
-
-            <!-- Location -->
-            <div class="form-group">
-                <label class="form-label" for="jobLocation">Job Location</label>
-                <input type="text" id="jobLocation" name="jobLocation" placeholder="e.g. Molyko, Buea"required>
-                <div class="error-message" id="jobLocationError"> Please enter a job location.</div>
-            </div>
-
-            <!-- Salary -->
-            <div class="form-group">
-                <label class="form-label" for="salary">Salary Range (XAF/monthly)</label>
-                <input type="text" id="salary" name="salary" placeholder="e.g. 100,000 - 200,000" required>
-                <div class="error-message" id="salaryError">Please enter a salary range.</div>
-            </div>
-
-            <!-- Skills -->
-            <div class="form-group">
-                <label class="form-label" for="skills">
-                    Required Skills
-                </label>
-                <input type="text" id="skills" placeholder="e.g. HTML, CSS, JavaScript">
-            </div>
-
-            <!-- Description -->
-            <div class="form-group">
-                <label class="form-label" for="jobDesc">Job Description</label>
-                <textarea class="form-textarea" id="jobDesc" rows="6" maxlength="500" placeholder="Describe the role and responsibilities..." required></textarea>
-                <p id="counter">0 / 500</p>
-                <div class="error-message" id="jobDescError">Please enter at least 50 characters.</div>
-            </div>
-
-            <!-- Requirements -->
-            <div class="form-group">
-                <label class="form-label" for="requirements">Requirements </label>
-                <textarea class="form-textarea" id="requirements" rows="4" placeholder="List qualifications and skills..."></textarea>
-            </div>
-
-            <!-- Deadline -->
-            <div class="form-group">
-                <label class="form-label" for="deadline">Application Deadline</label>
-                <input class="form-input" id="deadline" type="date" required>
-            </div>
-
-            <!-- Privacy Note -->
-            <div class="privacy-note">
-                🔒<strong>Privacy Note:</strong>Your contact email is only shared with applicants who submit a full application.
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" class="btn-primary" id="submitBtn">Post Job Now</button>
-
-        </form>
-    </div>
-
-    <!-- Live Preview Card -->
-    <div class="preview-card">
-        <h2>Live Job Preview</h2>
-        <div class="job-preview">
-            <h3 id="previewTitle">Software Engineer</h3>
-            <p id="previewCompany">CTinc Group</p>
-            <p id="previewLocation">Camp-cic, Buea</p>
-            <p id="previewSalary">100,000 XAF</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="jobTitle">Job Title <span>*</span></label>
+          <input class="form-input" id="jobTitle" type="text" placeholder="e.g. Junior Developer" />
+          <div class="form-error" id="jobTitleErr">Please enter a job title.</div>
         </div>
+        <div class="form-group">
+          <label class="form-label" for="jobType">Employment Type <span>*</span></label>
+          <select class="form-select" id="jobType">
+            <option value="">Select type…</option>
+            <option>Full-time</option>
+            <option>Part-time</option>
+            <option>Internship</option>
+            <option>Remote</option>
+          </select>
+          <div class="form-error" id="jobTypeError">Please select an employment type.</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="jobLocation">Location <span>*</span></label>
+          <input class="form-input" id="jobLocation" type="text" placeholder="e.g. Buea, Molyko" />
+          <div class="form-error" id="jobLocationError">Please enter the job location.</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="salary">Salary / Stipend (XAF/month)</label>
+          <input class="form-input" id="salary" type="text" placeholder="e.g. 75,000 (optional)" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="jobDesc">Job Description <span>*</span></label>
+        <textarea class="form-textarea" id="jobDesc" rows="6"
+          placeholder="Describe the role, responsibilities, and what the candidate will be doing day-to-day…"></textarea>
+        <div class="form-error" id="jobDescError">Please provide a job description (at least 50 characters).</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="requirements">Requirements</label>
+        <textarea class="form-textarea" id="requirements" rows="4"
+          placeholder="List qualifications, skills, and experience required (optional but recommended)…"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="deadline">Application Deadline</label>
+        <input class="form-input" id="deadline" type="date" />
+      </div>
+
+      <div class="privacy-note">
+        <strong>Privacy Note:</strong> Your contact email is only shared with applicants who submit a full application. It won't appear on the public listing.
+      </div>
+      <button type="submit" class="btn">
+        Post Job Now
+      </button>
+      </form>
     </div>
-</section>
+</div>
 
 <!-- Success Message -->
 <div class="posted" id="completed">
-    <div class="posted-title">✅ Job Posted Successfully!</div>
+    <div class="posted-title">Job Posted Successfully!</div>
     <div class="posted-msg" id="postedMsg">Your job is now live on NexStep.</div>
 </div>
 
-<!-- Footer -->
+<!-- Footer Section -->
 <footer>
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div>
-                <a href="home.html" class="footer-logo">Nex<span>Step</span></a>
-                <p class="footer-desc">Connecting skilled youth with local employers in Buea.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Platform</h4>
-                <a href="job.html">Browse Jobs</a>
-                <a href="employer.html">Post a Job</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2026 NexStep. Made with innovation in Buea, Cameroon.</span>
-        </div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">Nex<span>Step</span></a>
+        <p class="footer-desc">Connecting skilled youth with local employers in Buea.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="listings.html">Browse Jobs</a>
+        <a href="post-job.html">Post a Job</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: support@nexstep.cm</p>
+        <p>Location: Buea, Cameroon</p>
+      </div>
     </div>
+    <div class="footer-bottom"><span>© 2025 BueaJobs. Made innovation  in Buea, Cameroon.</span></div>
+  </div>
 </footer>
 
 <!-- JavaScript link-->
