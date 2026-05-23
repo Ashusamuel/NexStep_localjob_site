@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NextStep — Find Work in Buea</title>
   <link rel="stylesheet" href="/css/home.css" />
+  <link rel="icon" type="image/png" href="/image/favicon.png" />
 </head>
 <body>
 
@@ -71,7 +72,7 @@
     </div>
 
     <div class="jobs-grid">
-      <a href="detail.html" class="job-card">
+      <a href="details.html" class="job-card">
         <div class="job-card-top">
           <div class="company-logo">CT</div>
           <span class="job-badge badge-full">Full-time</span>
@@ -85,7 +86,7 @@
         </div>
       </a>
 
-      <a href="detail.html" class="job-card">
+      <a href="details.html" class="job-card">
         <div class="job-card-top">
           <div class="company-logo">MH</div>
           <span class="job-badge badge-intern">Internship</span>
@@ -99,7 +100,7 @@
         </div>
       </a>
 
-      <a href="detail.html" class="job-card">
+      <a href="details.html" class="job-card">
         <div class="job-card-top">
           <div class="company-logo">EC</div>
           <span class="job-badge badge-full">Full-time</span>
@@ -178,6 +179,14 @@
     <div class="footer-bottom"><span>© 2025 BueaJobs. Made innovation  in Buea, Cameroon.</span></div>
   </div>
 </footer>
+<script>
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
+</script>
 </body>
 </html>
        

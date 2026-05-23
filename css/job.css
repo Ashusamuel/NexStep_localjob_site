@@ -341,3 +341,59 @@ footer {
   gap: 0.5rem;
 }
 /* End of footer section  */
+
+/* RESPONSIVE  */
+@media (max-width: 900px) {
+  .job-detail-layout { 
+    grid-template-columns: 1fr; 
+  }
+  .job-detail-sidebar { 
+    position: static; 
+  }
+  .footer-top { 
+    grid-template-columns: 1fr 1fr; 
+  }
+  .footer-top > :first-child { 
+    grid-column: 1 / -1; 
+  }
+}
+
+@media (max-width: 640px) {
+  nav { 
+    padding: 0 1.25rem; 
+  }
+  .nav-links {
+     display: none; 
+    }
+  .nav-links.open {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start;
+    position: absolute; 
+    top: 64px; left: 0; right: 0;
+    background: var(--dark);
+    padding: 1rem 1.25rem;
+    border-bottom: 2px solid var(--green);
+  }
+  .hamburger { 
+    display: flex; 
+  }
+  .hero, .section, .page-header { 
+    padding-left: 1.25rem; padding-right: 1.25rem; 
+  }
+  .hero-stats { 
+    flex-wrap: wrap; gap: 1.5rem; 
+  }
+  .footer-top { 
+    grid-template-columns: 1fr; gap: 1.5rem; 
+  }
+  .form-row { 
+    grid-template-columns: 1fr; 
+  }
+  .search-bar { 
+    flex-direction: column; align-items: stretch;
+   }
+  .search-divider { 
+    display: none; 
+  }
+}

@@ -4,79 +4,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Job Detail — NexStep</title>
-  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="/css/detail.css" />
+  <link rel="icon" type="image/png" href="/image/favicon.png" />
 </head>
 <body>
 
   <!-- Nav section -->
-<nav>
-  <a href="index.html" class="nav-logo">Nex<span>Step</span></a>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="listings.html" class="active">Browse Jobs</a>
-    <a href="post-job.html">Post a Job</a>
-    <a href="listings.html" class="nav-cta btn">Find Jobs →</a>
-  </div>
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Footer section -->
-<footer>
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div>
-                <a href="home.html" class="footer-logo">Nex<span>Step</span></a>
-                <p class="footer-desc"> Connecting skilled youth with local employers in Buea. </p>
-            </div>
-            <div class="footer-col">
-                <h4>Platform</h4>
-                <a href="job.html">Browse Jobs</a>
-                <a href="employer.html">Post a Job</a>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>Email: support@nexstep.cm</p>
-                <p>Location: Buea, Cameroon</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>
-                © 2026 NexStep. Made with innovation in Buea, Cameroon.
-            </span>
-        </div>
+  <nav>
+    <a href="home.html" class="nav-logo">Nex<span>Step</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="home.html">Home</a>
+      <a href="job.html" class="active">Browse Jobs</a>
+      <a href="employer.html">Post a Job</a>
+      <a href="job.html" class="nav-cta btn">Find Jobs </a>
     </div>
-</footer>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Job Details Section -->
+  <section class="details-section">
+    <div class="details-container" id="jobDetails">
+      <!-- Job info will be injected here by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer>
+      <div class="footer-inner">
+          <div class="footer-top">
+              <div>
+                  <a href="home.html" class="footer-logo">Nex<span>Step</span></a>
+                  <p class="footer-desc"> Connecting skilled youth with local employers in Buea. </p>
+              </div>
+              <div class="footer-col">
+                  <h4>Platform</h4>
+                  <a href="job.html">Browse Jobs</a>
+                  <a href="employer.html">Post a Job</a>
+              </div>
+              <div class="footer-col">
+                  <h4>Contact</h4>
+                  <p>Email: support@nexstep.cm</p>
+                  <p>Location: Buea, Cameroon</p>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <span>
+                  © 2026 NexStep. Made with innovation in Buea, Cameroon.
+              </span>
+          </div>
+      </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Job database
+    const jobs = {
+      1: {
+        title: "Frontend Web Developer",
+        company: "Mountain Hub",
+        location: "Molyko, Buea",
+        salary: "150,000 XAF/month",
+        type: "Full-Time",
+        description: "We are looking for a frontend developer skilled in HTML, CSS and JavaScript to build modern responsive websites."
+      },
+      2: {
+        title: "UI/UX Design Intern",
+        company: "ActivSpaces",
+        location: "Check Point, Buea",
+        salary: "80,000 XAF/month",
+        type: "Internship",
+        description: "Assist the design team in creating user-friendly interfaces and mobile app designs."
+      },
+      3: {
+        title: "IT Support Technician",
+        company: "University of Buea",
+        location: "UB Junction",
+        salary: "120,000 XAF/month",
+        type: "Full-Time",
+        description: "Provide technical support, maintain systems and troubleshoot network issues."
+      },
+      4: {
+        title: "Social Media Manager",
+        company: "Buea Digital Agency",
+        location: "Great Soppo",
+        salary: "90,000 XAF/month",
+        type: "Part-Time",
+        description: "Manage social media accounts and create digital marketing campaigns."
+      },
+      5: {
+        title: "Mobile App Developer",
+        company: "Silicon Mountain Startup",
+        location: "Molyko",
+        salary: "200,000 XAF/month",
+        type: "Contract",
+        description: "Develop cross-platform mobile applications with Flutter or React Native."
+      }
+    };
+
+    // Get job ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const job = jobs[id];
+
+    // Select container
+    const container = document.getElementById("jobDetails");
+
+    if (job) {
+      container.innerHTML = `
+        <h1>${job.title}</h1>
+        <p><strong>Company:</strong> ${job.company}</p>
+        <p><strong>Location:</strong> ${job.location}</p>
+        <p><strong>Salary:</strong> ${job.salary}</p>
+        <p><strong>Job Type:</strong> ${job.type}</p>
+        <h3>Job Description</h3>
+        <p>${job.description}</p>
+        
+        <a href="apply.html" class="apply-btn">Apply Now</a>
+      `;
+    } else {
+      container.innerHTML = `<h1>Job Not Found</h1>`;
+    }
+
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+});
+  </script>
 </body>
 </html>

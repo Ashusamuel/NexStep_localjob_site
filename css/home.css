@@ -30,7 +30,8 @@ body {
 /* ── NAV ── */
 nav {
   position: sticky; 
-  top: 0; z-index: 100;
+  top: 0; 
+  z-index: 1000;
   background: var(--dark);
   display: flex; 
   align-items: center; 
@@ -59,6 +60,11 @@ nav {
    gap: 0.25rem; 
   }
 
+  .nav-links.open {
+  display: flex;
+  z-index: 999;
+}
+
 .nav-links a {
   color: #b0b5ae; text-decoration: none;
   font-size: 0.9rem; font-weight: 500;
@@ -81,12 +87,14 @@ nav {
     background: var(--green-light) ; 
 }
 
-.hamburger { 
-    display: none; 
-    flex-direction: column;
-     gap: 5px; 
-     cursor: pointer; 
-    }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
 .hamburger span { 
     width: 24px; 
     height: 2px; background: var(--white); 

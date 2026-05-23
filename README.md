@@ -120,7 +120,11 @@ js/
 - script.js
   
 images/
+Favicon.png
 
+---------
 README.md
 
 links.......
+github link: "https://github.com/Ashusamuel/NexStep_localjob_site.git"
+online link: "https://nex-step-localjob-site.vercel.app/"

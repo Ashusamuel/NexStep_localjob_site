@@ -1,3 +1,4 @@
+
 const form = document.getElementById("postForm");
 
 // Inputs
@@ -91,3 +92,9 @@ form.addEventListener("submit", function(event){
     form.reset();
 });
 
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+navLinks.classList.toggle("open");
+});

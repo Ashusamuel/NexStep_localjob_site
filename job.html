@@ -79,7 +79,7 @@
                 </span>
                 <div>
                     <span class="job-type"> Full-Time</span>
-                    <a href="details.html" class="details-btn">View Details</a>
+                    <a href="details.html?id=1" class="details-btn">View Details</a>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
                 <span class="salary">80,000 XAF/month</span>
                 <div>
                     <span class="job-type internship">Internship</span>
-                    <a href="details.html" class="details-btn">View Details</a>
+                    <a href="details.html?id=2" class="details-btn">View Details</a>
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@
                     <span class="job-type">
                         Full-Time
                     </span>
-                    <a href="details.html" class="details-btn">
+                    <a href="details.html?id=3" class="details-btn">
                         View Details
                     </a>
                 </div>
@@ -136,7 +136,7 @@
                 <span class="job-type">
                     Part-Time
                 </span>
-                <a href="details.html" class="details-btn">
+                <a href="details.html?id=4" class="details-btn">
                     View Details
                 </a>
                 </div>
@@ -286,6 +286,13 @@
     </div>
 </footer>
 <!-- JavaScript -->
-<script src="js/script.js"></script>
+<script>
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+navLinks.classList.toggle("open");
+});
+</script>
 </body>
 </html>
