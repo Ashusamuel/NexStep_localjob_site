@@ -123,7 +123,7 @@ images/
 Favicon.png
 
 ---------
-README.md
+- README.md
 
 links.......
 github link: "https://github.com/Ashusamuel/NexStep_localjob_site.git"
