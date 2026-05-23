@@ -1,6 +1,6 @@
 const form = document.getElementById("postForm");
 
-// Inputs
+// Inputs 
 const companyName = document.getElementById("companyName");
 const email = document.getElementById("contactEmail");
 const jobTitle = document.getElementById("jobTitle");
