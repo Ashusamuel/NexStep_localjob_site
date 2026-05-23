@@ -193,10 +193,9 @@ nav {
             transition: 0.3s ease-in-out; /* give a delay to the hover effect */
         }
     /* End of Job directory */
-
     /* Job listings pages */
-
     /* job card styling */
+ 
         .card-container{
             display: flex;
             flex-wrap: wrap; 
@@ -207,18 +206,26 @@ nav {
             gap: 2rem;
             padding: 0 2.5rem;
             margin-bottom: 3rem;
+            
         }
         .card-container .job-left{
-            background-color: var(--cream);
+            background-color: white;
+            display: flex;
+            align-items: center;
             color: var(--white);
-            width: 25em;
-            height: 12em;
+            width: 20em;
+            height: 19em;
             display: flex;
             justify-content: space-between;
             padding: 2em;
-            border-bottom: 0.25em solid var(--green);
+         /*   border-top: 0.25em solid var(--green);*/
+            border: 2px solid var(--green);
+            border-radius: 45px;
             gap: 2em;
             margin-right: 3em;
+            transform: translateX(-2px);        }
+        .card-container .job-left :hover{
+                    transform: scaleY(3px);
         }
         .card-container .job-left .job-info h2{
             font-family: 'Syne', sans-serif;
@@ -236,16 +243,59 @@ nav {
             color: var(--green-dark);
             font-weight: bold;
         }
-        .card-container .job-left .job-type{
-            height: 1.55em;
-            width: 25em;
-            text-align: center;
-            color: var(--white);
-            border-radius: 6px;
-            font-size: 0.85em;
-            font-weight: bold;
-            background-color: var(--green-dark);
-        }
+       /* Make the job card a positioning reference */
+.job-left {
+    position: relative;
+}
+
+/* Style and position the job type badge */
+.job-type-full {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--green-light); 
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 12px;
+
+    /* optional: subtle shadow */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.job-type-intern{
+   position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #fe520d; 
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 12px;
+
+    /* optional: subtle shadow */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.job-type-part{
+   position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #2ecc71; 
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 12px;
+
+    /* optional: subtle shadow */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+}
+
+
           .card-container .job-left .details-btn{
               display: block;
               text-align: center;
@@ -278,8 +328,8 @@ nav {
             font-size: 1em;
             color: var(--text);
         }
-     /* End of Job listings pages */
 
+/* End of Job listings pages */
 /* footer section  */
 footer {
     background: var(--dark);
@@ -397,3 +447,4 @@ footer {
     display: none; 
   }
 }
+

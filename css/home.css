@@ -315,8 +315,11 @@ nav {
 }
 
 .job-badge {
-  font-size: 0.72rem; font-weight: 600; padding: 0.25rem 0.65rem;
-  border-radius: 100px; letter-spacing: 0.04em;
+  font-size: 0.72rem; 
+  font-weight: 600; 
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px; 
+  letter-spacing: 0.04em;
 }
 .badge-full { 
   background: #e8f5ee; 
