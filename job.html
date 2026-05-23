@@ -6,7 +6,7 @@
     <title>Find Jobs | NexStep</title>
     <link rel="stylesheet" href="/css/job.css">
 </head>
-<body>
+<body loader="lazy">
 <!-- Header -->
 <header>
     <nav>
@@ -48,7 +48,7 @@
 <section class="search-section">
     <div class="search-bar">
         <input type="text" placeholder="Search jobs in Buea...">
-        <select>
+        <select id="select_option">
             <option>All Areas</option>
             <option>Molyko</option>
             <option>Mile 17</option>
@@ -57,6 +57,9 @@
             <option>Check Point</option>
             <option>UB Junction</option>
         </select>
+        </div>
+</section>
+         <!-- End of Search Section -->
 <!-- Job Categories -->
 <section class="tabs">
     <button class="tab active">All Types</button>
@@ -67,9 +70,8 @@
 </section>
 
 <!-- Jobs Container -->
-<section class="jobs-container">
+<section class="card-container">
     <!-- Job Card -->
-    <div class="job-card">
         <div class="job-left">
             <div class="job-info">
                 <h2>Frontend Web Developer</h2>
@@ -77,13 +79,12 @@
                 <span class="salary">
                     150,000 XAF/month
                 </span>
+                <div>
+                    <span class="job-type"> Full-Time</span>
+                    <a href="details.html" class="details-btn">View Details</a>
+                </div>
             </div>
         </div>
-        <div class="job-right">
-            <span class="job-type"> Full-Time</span>
-            <a href="details.html" class="details-btn">View Details</a>
-        </div>
-    </div>
 
     <!-- Job Card -->
     <div class="job-card">
@@ -92,10 +93,11 @@
                 <h2>UI/UX Design Intern</h2>
                 <p> ActivSpaces • Check Point, Buea </p>
                 <span class="salary">80,000 XAF/month</span>
+                <div>
+                    <span class="job-type internship">Internship</span>
+                    <a href="details.html" class="details-btn">View Details</a>
+                </div>
             </div>
-        </div>
-        <div class="job-right">
-            <span class="job-type internship">Internship</span><a href="details.html" class="details-btn">View Details</a>
         </div>
     </div>
 
@@ -108,16 +110,17 @@
                 <span class="salary">
                     120,000 XAF/month
                 </span>
+                <div>
+                    <span class="job-type">
+                        Full-Time
+                    </span>
+                    <a href="details.html" class="details-btn">
+                        View Details
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="job-right">
-            <span class="job-type">
-                Full-Time
-            </span>
-            <a href="details.html" class="details-btn">
-                View Details
-            </a>
-        </div>
+        
     </div>
 
     <!-- Job Card -->
@@ -131,16 +134,15 @@
                 <span class="salary">
                     90,000 XAF/month
                 </span>
+                <div>
+                <span class="job-type">
+                    Part-Time
+                </span>
+                <a href="details.html" class="details-btn">
+                    View Details
+                </a>
+                </div>
             </div>
-        </div>
-
-        <div class="job-right">
-            <span class="job-type">
-                Part-Time
-            </span>
-            <a href="details.html" class="details-btn">
-                View Details
-            </a>
         </div>
     </div>
 
@@ -155,9 +157,7 @@
                 <span class="salary">
                     200,000 XAF/month
                 </span>
-            </div>
-        </div>
-        <div class="job-right">
+                <div>
             <span class="job-type">
                 Contract
             </span>
@@ -165,6 +165,9 @@
                 View Details
             </a>
         </div>
+            </div>
+        </div>
+        
     </div>
 
     <!-- Job Card -->
@@ -178,15 +181,15 @@
                 <span class="salary">
                     100,000 XAF/month
                 </span>
-            </div>
-        </div>
-        <div class="job-right">
+                <div>
             <span class="job-type">
                 Part-Time
             </span>
             <a href="details.html" class="details-btn">
                 View Details
             </a>
+        </div>
+            </div>
         </div>
     </div>
 
@@ -201,15 +204,15 @@
                 <span class="salary">
                     70,000 XAF/month
                 </span>
-            </div>
-        </div>
-        <div class="job-right">
+                <div>
             <span class="job-type internship">
                 Internship
             </span>
             <a href="details.html" class="details-btn">
                 View Details
             </a>
+        </div>
+            </div>
         </div>
     </div>
 
@@ -224,17 +227,39 @@
                 <span class="salary">
                     110,000 XAF/month
                 </span>
+                <div>
+                    <span class="job-type">
+                        Full-Time
+                    </span>
+                    <a href="details.html" class="details-btn">
+                        View Details
+                    </a> 
+                </div>
             </div>
         </div>
-        <div class="job-right">
-            <span class="job-type">
-                Full-Time
-            </span>
-            <a href="details.html" class="details-btn">
-                View Details
-            </a>
+    </div>
+    <div class="job-card">
+        <div class="job-left">
+            <div class="job-info">
+                <h2>Server Administrator</h2>
+                <p>
+                    Local Connect Ltd • Mile 17, Buea
+                </p>
+                <span class="salary">
+                    120,000 XAF/month
+                </span>
+                <div>
+                    <span class="job-type">
+                        Full-Time
+                    </span>
+                    <a href="details.html" class="details-btn">
+                        View Details
+                    </a> 
+                </div>
+            </div>
         </div>
     </div>
+
 </section>
 <!-- Footer -->
 <footer>
