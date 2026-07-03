@@ -117,7 +117,8 @@ NexStep/
 - apply.css
 
 js/
-- script.js
+- employer.js
+- apply.js
   
 images/
 Favicon.png
