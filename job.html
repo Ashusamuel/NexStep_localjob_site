@@ -33,8 +33,7 @@
             Discover Local Opportunities in Buea
         </h2>
         <p>
-            Helping students and graduates connect with employers through
-            <span class="span-1">Nex</span><span class="span-2">Step</span>
+            Helping students and graduates connect with employers through our platform
         </p>
     </div>
 </section>
@@ -42,61 +41,78 @@
 <section class="section">
  <div class="section-inner">
 
-    <!-- Search Section -->
-<section class="search-section">
+    <!-- SEARCH -->
     <div class="search-bar">
-        <input type="text" placeholder="Search jobs in Buea...">
-        <select id="select_option">
-            <option>All Areas</option>
-            <option>Camp-sic</option>
-            <option>Molyko</option>
-            <option>Mile 17</option>
-            <option>Bonduma</option>
-            <option>Great Soppo</option>
-            <option>Check Point</option>
-            <option>UB Junction</option>
-        </select>
-        </div>
-</section>
-         <!-- End of Search Section -->
-<!-- Job Categories -->
-<section class="tabs">
-    <button class="tab active">All Types</button>
-    <button class="tab">Internship</button>
-    <button class="tab">Full-Time</button>
-    <button class="tab">Part-Time</button>
-</section>
+      <svg width="18" height="18" fill="none" stroke="#7a8077" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input class="search-input" id="searchInput" type="text" placeholder="Job title, keyword, or company..." />
+      <div class="search-divider"></div>
+      <svg width="16" height="16" fill="none" stroke="#7a8077" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <select class="search-select" id="locationFilter">
+        <option value="">All Locations</option>
+        <option>Buea, Molyko</option>
+        <option>Buea Town</option>
+        <option>Mile 17</option>
+        <option>Bonduma</option>
+      </select>
+      <button class="btn btn-primary btn-sm" onclick="filterJobs()">Search</button>
+    </div>
+<!-- End of Search Section -->
 
+ <!-- FILTERS -->
+    <div class="filters" id="typeFilters">
+      <button class="filter-btn active" data-type="all" onclick="setType(this,'all')">All Types</button>
+      <button class="filter-btn" data-type="full" onclick="setType(this,'full')">Full-time</button>
+      <button class="filter-btn" data-type="intern" onclick="setType(this,'intern')">Internship</button>
+      <button class="filter-btn" data-type="part" onclick="setType(this,'part')">Part-time</button>
+      <button class="filter-btn" data-type="remote" onclick="setType(this,'remote')">Remote</button>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+      <p style="color:var(--muted); font-size:0.88rem;">Showing <strong id="jobCount" style="color:var(--dark)">8</strong> jobs</p>
+      <select class="form-select" style="width:auto; padding:0.4rem 0.75rem; font-size:0.85rem;" onchange="sortJobs(this.value)">
+        <option value="newest">Newest First</option>
+        <option value="salary">Highest Salary</option>
+      </select>
+    </div>
+
+    <!--Grid-->
     <div class="jobs-grid">
-      <a href="details.html?id=1" class="job-card">
-        <div class="job-card-top">
-          <div class="company-logo">CT</div>
-          <span class="job-badge badge-full">Full-time</span>
-        </div>
-        <div class="job-title">Network Administrator</div>
-        <div class="job-company">Ctnet</div>
-        <div class="job-desc">Monitor and maintain network infrastructure to ensure optimal performance and security.</div>
-        <div class="job-meta">
-          <span class="job-meta-item">Camp-sic, Buea</span>
-          <span class="job-meta-item">75,000 XAF/month</span>
-        </div>
-      </a>
+        <!-- Job cards will be dynamically inserted here by JavaScript -->
+          <a href="job-detail.html?id=1" class="job-card">
+            <div class="job-card-top">
+              <div class="company-logo">BC</div>
+              <span class="job-badge badge-full">Full-time</span>
+            </div>
+            <div class="job-title">Junior Web Developer</div>
+            <div class="job-company">BuiltCode Studio</div>
+            <div class="job-desc">
+              Build and maintain web applications for local SMEs. Must know
+              HTML, CSS, and basic JavaScript.
+            </div>
+            <div class="job-meta">
+              <span class="job-meta-item">📍 Buea, Molyko</span>
+              <span class="job-meta-item">💰 75,000 XAF/mo</span>
+            </div>
+          </a>
 
-      <a href="details.html?id=2" class="job-card">
-        <div class="job-card-top">
-          <div class="company-logo">MH</div>
-          <span class="job-badge badge-intern">Internship</span>
-        </div>
-        <div class="job-title">Junior Web Developer</div>
-        <div class="job-company">MountainHub</div>
-        <div class="job-desc">Assist in developing and maintaining web applications for a growing tech company.</div>
-        <div class="job-meta">
-          <span class="job-meta-item">Greate soppo, Buea</span>
-          <span class="job-meta-item">30,000 XAF/mo</span>
-        </div>
-      </a>
+      <a href="job-detail.html?id=2" class="job-card">
+            <div class="job-card-top">
+              <div class="company-logo" style="background: #1a3a5f">GX</div>
+              <span class="job-badge badge-intern">Internship</span>
+            </div>
+            <div class="job-title">Graphic Design Intern</div>
+            <div class="job-company">GreenXpress Logistics</div>
+            <div class="job-desc">
+              Create social media visuals and marketing materials for a
+              fast-growing logistics startup.
+            </div>
+            <div class="job-meta">
+              <span class="job-meta-item">Buea, Mile 17</span>
+              <span class="job-meta-item">30,000 XAF/mo</span>
+            </div>
+          </a>
 
-      <a href="details.html?id=3" class="job-card">
+      <a href="job-detail.html?id=3" class="job-card">
         <div class="job-card-top">
           <div class="company-logo">EC</div>
           <span class="job-badge badge-full">Full-time</span>

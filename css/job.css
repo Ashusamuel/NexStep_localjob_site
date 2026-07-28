@@ -128,43 +128,42 @@ nav {
         font-weight: bold;
     }
 
-    /* Search bar section */
-    .search-section {
-        background: var(--white);
-        padding: 1.5em 2.5em;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        margin-bottom: 2em;
-    }
-    .search-bar {
-        display: flex;
-        gap: 1em;
-        justify-content: center;
-         flex-wrap: wrap;
-    }
-    .search-bar input {
-      width: 30em;
-      display: flex;
-      padding: 0.75em;
-      border: 0.02em solid var(--border);
-      border-radius: 5em;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .search-bar select {
-        padding: 0.75em;
-        border: 0.02em solid var(--border);
-        border-radius: 4px;
-        font-family: 'DM Sans', sans-serif;
-    }
-    .search-bar input:focus, .search-bar select:focus {
-        outline: none;
-        border-color: var(--green);
-    }
-    .search-bar input::placeholder { 
-        color: var(--text);
-    }
-    /*  End of Search bar section */
+  /* Search bar section */
+   .search-bar {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: 12px; padding: 1.25rem 1.5rem;
+  display: flex; gap: 1rem; align-items: center;
+  margin-bottom: 2rem; flex-wrap: wrap;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
 
+.search-input {
+  flex: 1; min-width: 200px;
+  border: none; outline: none;
+  font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
+  color: var(--dark); background: transparent;
+}
+
+.search-divider { width: 1px; height: 28px; background: var(--border); }
+
+.search-select {
+  border: none; outline: none; background: transparent;
+  font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+  color: var(--muted); cursor: pointer;
+}
+/*  End of Search bar section */
+/* ── FILTERS ── */
+.filters { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
+
+.filter-btn {
+  padding: 0.4rem 1rem; border-radius: 100px;
+  border: 1.5px solid var(--border); background: var(--white);
+  font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500;
+  color: var(--text); cursor: pointer; transition: all 0.2s;
+}
+.filter-btn:hover, .filter-btn.active {
+  border-color: var(--green); background: var(--green); color: var(--white);
+}
   
  /* End of Hero Section */
 
@@ -198,9 +197,11 @@ nav {
  
        * Job listing */
 .jobs-grid {
+  
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.25rem;
+  align-items: stretch;
 }
 
 .job-card {
@@ -212,7 +213,9 @@ nav {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .job-card:hover {
@@ -292,6 +295,7 @@ nav {
   display: flex; 
   gap: 1rem; 
   flex-wrap: wrap; 
+  margin-top: auto;
 }
 
 .job-meta-item {
